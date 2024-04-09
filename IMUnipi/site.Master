@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="site.master.cs" Inherits="IMUnipi.site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+   <meta charset="UTF-8"  name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>IMUniPi</title>    
+        <link href="IMUnipi.css" rel="stylesheet"/>
+        <link href="https://www.fontawesomecheatsheet.com/" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+</head>
+<body style="padding-top:10%;" class="animate">
+    <form id="form1" runat="server">
+        <div>
+             <!-- top menu-->
+            <nav class="overlay" id="top-menu">
+                <!--top menu items-->
+
+                <div  id="navigationmenu">
+
+                <!--close btn-->
+
+            
+
+                <!--logo-->
+        
+                <img id="logo" src="media\alien.png" class="lg" float="right"/>
+                <!-- menu icon hamburger-->
+                <div class="menu-ic">
+
+                    <span style="font-size:20px;cursor:pointer" onclick="open()" id="menu-icon">&#9776;</span>
+                </div>
+            
+
+
+                <div class="overlay-content" id="navbar">
+                    <a href="index.aspx">Home</a>
+                    <a href="collection.aspx">Collection</a>
+                    <a href="index.aspx#s1">Who are we?</a>
+                    <a href="index.aspx#s2">What is IMUniPi</a>
+                    <a href="request.aspx">Request A Movie</a>
+                
+                     <asp:Label ID="Label1" runat="server" Text="Not Logged in."></asp:Label>
+                    &nbsp&nbsp<br />
+                    <asp:Button ID="Button1" runat="server" CssClass="smallbtn"  OnClick="Button1_Click" Text="Log Out" />
+                    <input type="text" placeholder="Search..." />
+
+                </div>
+
+            
+        
+
+            
+            </div>
+
+     
+        </nav>
+        <div class="ov-c" id="nr">
+
+        <a href="janascript:void(0)" class="close" id="cls" onclick="closenav()">&times;</a>
+
+
+            <br/>
+            <a href="index.aspx">Home</a>
+            <a href="collection.aspx">Trailers</a>
+            <a href="index.aspx#s1">Who are we?</a><br/>            
+            <a href="index.aspx#s2">What is IMUniPi</a><br/>
+            <a href="request.aspx">Request A Movie</a><br/>
+
+        </div>
+        <br />
+        <br />
+        <br />
+    </div>
+
+    
+        <div class="content-wrapper"> 
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                
+   
+            </asp:ContentPlaceHolder>
+        </div>
+        <div>
+        </div>
+    </form>
+</body>
+</html>
